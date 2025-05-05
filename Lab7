@@ -1,0 +1,21 @@
+A = [5, 8, 3, 10, 2, 6, 7]
+with open("orijinal_massiv.txt", "w") as f:
+    for num in A:
+        f.write(str(num) + "\n")
+
+with open("orijinal_massiv.txt", "r") as f:
+    ilk_uc_eded = [int(f.readline().strip()) for _ in range(3)]
+
+with open("ilk_uc_eded.txt", "w") as f:
+    for num in ilk_uc_eded:
+        f.write(str(num) + "\n")
+
+hasil = 1
+for num in ilk_uc_eded:
+    hasil *= num
+print(f"İlk 3 ədədin hasilı: {hasil}")
+
+with open("ilk_uc_eded_ve_hasil.txt", "w") as f:
+    for num in ilk_uc_eded:
+        f.write(str(num) + "\n")
+    f.write(f"Hasil: {hasil}\n")
